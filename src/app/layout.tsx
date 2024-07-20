@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
-import { background } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 const DynamicAntdLayout = dynamic(() => import('@/app/components/defaultLayout'), { ssr: false });
 

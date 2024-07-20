@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 const { Header, Content } = Layout;
 
 const AntdLayout = ({ children }: { children: React.ReactNode }) => {
+
   const { defaultAlgorithm, darkAlgorithm } = antdTheme;
   const { isDarkMode, setDarkMode } = useThemeStore()
   const router = useRouter()
