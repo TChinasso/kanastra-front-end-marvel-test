@@ -8,7 +8,7 @@ import { Pagination } from 'antd';
 const { Meta } = Card;
 
 import { Character, CharacterTumbNail } from "@/types";
-export default function Home() {
+export default function Heroes() {
   const { push } = useRouter()
 
   const { getCharacters, characters, loading } = useCharacterStore()
@@ -53,6 +53,7 @@ export default function Home() {
         {characters?.map((character) => {
           return (
             <Card
+            key={character.id}
               onClick={() => gotoCharacterPage(character)}
               style={{ width: 250, height: '300px' }}
               cover={
