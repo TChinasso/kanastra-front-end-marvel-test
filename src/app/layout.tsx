@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { AntdRegistry } from '@ant-design/nextjs-registry';
+import { background } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
+const DynamicAntdLayout = dynamic(() => import('@/app/components/defaultLayout'), { ssr: false });
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+      <AntdRegistry>
+          <DynamicAntdLayout>
+            {children}
+          </DynamicAntdLayout>
+        </AntdRegistry>
+      </body>
     </html>
   );
 }
