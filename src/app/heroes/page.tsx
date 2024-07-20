@@ -5,6 +5,7 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 import { Avatar, Card } from 'antd';
 import { useRouter } from 'next/navigation';
 import { Pagination } from 'antd';
+import Image from 'next/image'
 const { Meta } = Card;
 
 import { Character, CharacterTumbNail } from "@/types";
@@ -57,9 +58,9 @@ export default function Heroes() {
               onClick={() => gotoCharacterPage(character)}
               style={{ width: 250, height: '300px' }}
               cover={
-                <img
+                <Image
                   width={250}
-                  height={'80%'}
+                  height={'80'}
                   alt="example"
                   src={characterThumbnailUrl(character.thumbnail)}
                 />
