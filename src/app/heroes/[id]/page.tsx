@@ -70,7 +70,7 @@ export default function Heroe({ params, searchParams }: any) {
             {character.urls?.map((url, index) => {
               return (
                 <div className='p-2' key={index}>
-                  <Link className='text-xl capitalize' target='_blank' href={url.url}>{url.type}</Link>
+                  <Link className='text-xl capitalize' target='_blank' href={new URL(url.url || '')}>{url.type}</Link>
                 </div>
               )
             })}
