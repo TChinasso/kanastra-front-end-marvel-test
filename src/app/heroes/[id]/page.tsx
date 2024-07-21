@@ -27,13 +27,13 @@ export default function Heroe({ params, searchParams }: any) {
   }
   const breadCrumbItems = [
     {
-    title: 'Characters',
-    href: '/heroes'
-  },
-  {
-    title: character?.name,
-  },
-]
+      title: 'Characters',
+      href: '/heroes'
+    },
+    {
+      title: character?.name,
+    },
+  ]
   useEffect(() => {
     queryCharacter()
   }, [])
@@ -61,10 +61,10 @@ export default function Heroe({ params, searchParams }: any) {
           alt="example"
           src={characterThumbnailUrl(character.thumbnail)}
         />
-        <div className='flex flex-col ml-4 p-4'>
-          <span className='text-6xl text-gray-600'>{character.name}</span>
+        <div className='flex flex-col ml-4 p-4 w-2/6'>
+          <span className='text-2xl text-gray-600'>{character.name}</span>
           <div className='p-4'>
-          <span className='text-gray-800 text-xl'>{character.description}</span>
+            <span className='text-gray-800 text-lg'>{character.description}</span>
           </div>
           <div className='self-start grow flex items-end'>
             {character.urls?.map((url, index) => {
