@@ -67,9 +67,9 @@ export default function Heroe({ params, searchParams }: any) {
           <span className='text-gray-800 text-xl'>{character.description}</span>
           </div>
           <div className='self-start grow flex items-end'>
-            {character.urls?.map(url => {
+            {character.urls?.map((url, index) => {
               return (
-                <div className='p-2'>
+                <div className='p-2' key={index}>
                   <Link className='text-xl capitalize' target='_blank' href={url.url}>{url.type}</Link>
                 </div>
               )
