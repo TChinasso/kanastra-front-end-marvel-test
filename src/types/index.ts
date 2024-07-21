@@ -8,6 +8,11 @@ export interface CharacterSearchparams {
   apikey: string
   orderBy: string
 }
+export interface CharactersFieldsSearchParams{
+  name?: string
+  nameStartsWith?: string
+  page?: number
+}
 export interface PaginatedResponse<type> {
   data: {
     results: type[]
@@ -22,7 +27,7 @@ export interface CharacterTumbNail {
   extension: string
 }
 export interface Colection<type> {
-  avaliable: number
+  available: number
   returned: number
   items: type
 }

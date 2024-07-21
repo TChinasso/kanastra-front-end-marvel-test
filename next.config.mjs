@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  i18n: {
+    locales: ['en', 'pt-BR'], // List of supported locales
+    defaultLocale: 'en', // Default locale
+    localeDetection: true, // Enable automatic locale detection
+  },
   async redirects() {
     return [
       {

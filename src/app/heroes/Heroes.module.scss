@@ -1,0 +1,24 @@
+.kn-card{
+  font-size: 20px;
+  overflow: hidden;
+  height: 300px;
+  width: 250px;
+  
+  &:hover{
+    cursor: pointer;
+    .kn-card__image{
+      transition: ease-in 0.3s;
+      transform: scale(1.1);
+    }
+  }
+  &__image{
+    height: 230px;
+    max-height: 230px;
+
+    object-fit: cover;
+    overflow: hidden;
+  }
+  &__meta{
+    font-weight: 600;
+  }
+}

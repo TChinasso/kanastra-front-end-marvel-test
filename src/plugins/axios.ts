@@ -2,7 +2,7 @@ import axios, { type AxiosInstance } from 'axios'
 
 const instance: AxiosInstance = axios.create({
   baseURL: 'https://gateway.marvel.com/v1/public',
-  timeout: 60000,
+  timeout: 10000,
   headers: { 'Content-Type': 'application/json' }
 })
 

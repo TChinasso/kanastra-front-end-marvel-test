@@ -31,3 +31,6 @@ body {
     text-wrap: balance;
   }
 }
+.ant-card-cover{
+  overflow: hidden;
+}

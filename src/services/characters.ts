@@ -6,5 +6,10 @@ export default {
     return await instance.get<PaginatedResponse<Character>>('/characters', {
       params: { ...searchParams }
     })
+  },
+  async getCharacter(searchParams: CharacterSearchparams, charactedId: string | number) {
+    return await instance.get<PaginatedResponse<Character>>(`/characters/${charactedId}`, {
+      params: { ...searchParams }
+    })
   }
 }
