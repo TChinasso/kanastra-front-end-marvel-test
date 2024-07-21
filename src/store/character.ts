@@ -26,7 +26,7 @@ export const useCharacterStore = create<CharacterStore>()((set, get) => ({
         limit: paginator.limit,
         offset: paginator.offset,
         orderBy: '-name',
-        ...params
+        nameStartsWith: params?.nameStartsWith
       }
       const { data } = await CharactersService.getCharacters(payload)
       set({ characters: data.data.results })
