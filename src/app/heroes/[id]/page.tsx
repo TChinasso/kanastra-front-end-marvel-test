@@ -53,7 +53,7 @@ export default function Heroe({ params, searchParams }: any) {
       <div className='mb-4'>
         <Breadcrumb className='text-lg' items={breadCrumbItems} />
       </div>
-      <div className={'flex border-grey-50 border-2 shadow-lg rounded-lg p-6 '}>
+      <div className={'flex flex-col  md:flex-row border-grey-50 border-2 shadow-lg rounded-lg p-6 '}>
         <Image
           width={250}
           height={50}
@@ -61,7 +61,7 @@ export default function Heroe({ params, searchParams }: any) {
           alt="example"
           src={characterThumbnailUrl(character.thumbnail)}
         />
-        <div className='flex flex-col ml-4 p-4 w-2/6'>
+        <div className='flex flex-col ml-4 p-4 md:w-5/12'>
           <span className='text-2xl text-gray-600'>{character.name}</span>
           <div className='p-4'>
             <span className='text-gray-800 text-lg'>{character.description}</span>
@@ -76,7 +76,7 @@ export default function Heroe({ params, searchParams }: any) {
             })}
           </div>
         </div>
-        <div className='grow flex justify-end'>
+        <div className='grow flex justify-center md:justify-end'>
           <Chart character={character} />
         </div>
       </div>
